@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1734222941977,
+        "img": "https://images.stockx.com/images/Nike-Dunk-Low-Essential-Paisley-Pack-Pink-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1676728252",
+        "nombre": "dunk pink paisley",
+        "precio": 9000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 54,
+            "24": 34
+        }
+    },
+    {
+        "id": 1734477968419,
+        "img": "https://images.stockx.com/images/vertical/Bape-Color-Camo-Shark-Full-Zip-Hoodie-Purple_1.jpg?fit=fill&bg=FFFFFF&w=396&h=504&q=60&dpr=1",
+        "nombre": "Bape Full Zip Purple",
+        "precio": 13500.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 12
+        }
+    },
+    {
+        "id": 1734478330512,
+        "img": "https://s3.amazonaws.com/stockx-sneaker-analysis/wp-content/uploads/2020/06/OFF-WHITE-Slim-Fit-Dripping-Arrows-T-Shirt-White-Black-2.jpg",
+        "nombre": "Off-White T-shirt",
+        "precio": 9500.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 12
+        }
+    },
+    {
+        "id": 1734482106051,
+        "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Chicago-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1665691099",
+        "nombre": "Jordan 1 Chicago Reimagined",
+        "precio": 9500.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "25": 2
+        }
+    },
+    {
+        "id": 1734482841785,
+        "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Black-Toe-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1731953350",
+        "nombre": "Jordan 1 Retro High OG Black Toe Reimagined",
+        "precio": 8760.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 34,
+            "25": 26
+        }
+    },
+    {
+        "id": 1734482883019,
+        "img": "https://images.stockx.com/360/adidas-Forum-Low-Bad-Bunny-Pink/Images/adidas-Forum-Low-Bad-Bunny-Pink/Lv2/img01.jpg?w=480&q=60&dpr=1&updated_at=1635341309&h=320",
+        "nombre": "Forum Pink Easter Bad Bunny",
+        "precio": 15000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 3,
+            "24": 2,
+            "25": 5
+        }
+    },
+    {
+        "id": 1734659540784,
+        "img": "https://images.stockx.com/images/Air-Jordan-4-Retro-Black-Cat-2020-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606315877",
+        "nombre": "Jordan 4 Black Cat",
+        "precio": 9540.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "28": 6,
+            "29": 4
+        }
+    },
+    {
+        "id": 1734659623298,
+        "img": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Pine-Green-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1678346835",
+        "nombre": "Jordan 4 Sb Pine Green",
+        "precio": 15600.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 4,
+            "25": 5
+        }
+    },
+    {
+        "id": 1734659705009,
+        "img": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606325738",
+        "nombre": "Dunk Sb Travis Scott",
+        "precio": 30000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "26": 5
+        }
+    },
+    {
+        "id": 1734659769789,
+        "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Lucky-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1681154454",
+        "nombre": "Jordan 1 Retro High OG Lucky Green",
+        "precio": 7000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 2
+        }
+    },
+    {
+        "id": 1734659956487,
+        "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1608736403",
+        "nombre": "Jordan 1 High Travis Scott Mocha",
+        "precio": 50000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "26": 5,
+            "27": 7
+        }
+    },
+    {
+        "id": 1738686629227,
+        "img": "https://images.stockx.com/images/adidas-Forum-Low-Bad-Bunny-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1738193358",
+        "nombre": "Forum Bad Bunny back to school",
+        "precio": 12500.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "26": 5,
+            "27": 6,
+            "28": 7
+        }
+    }
+]

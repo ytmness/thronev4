@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Throne Kicks - Carrito</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="main-header">
+    <!-- Barra superior -->
+    <div class="top-bar">
+      <div class="logo-container">
+        <img src="../images/file.png" alt="Throne Kicks Logo" />
+      </div>
+      <nav class="top-nav">
+        <a href="tenis.html">Tenis</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="accesorios.html">Accesorios</a>
+        <a href="retail.html">Retail</a>
+        <a href="carrito.html">Carrito</a>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar productos..." />
+        <button id="search-button">Buscar</button>
+      </div>
+    </div>
+
+    <!-- Barra inferior -->
+    <div class="bottom-bar">
+      <a href="#">Destacados</a>
+      <a href="#">Jordan</a>
+      <a href="#">Nike</a>
+      <a href="#">Adidas</a>
+      <a href="#">New Balance</a>
+      <a href="#">Apparel</a>
+      <a href="#">Marcas</a>
+    </div>
+  </header>
+
+  <!-- Sección del carrito -->
+  <main class="cart-section" style="padding: 40px 20px;">
+    <h2 style="text-align: center;">Carrito de Compras</h2>
+    <div id="cart-items" class="grid-container" style="padding-top: 20px;">
+      <p>Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-total" style="text-align: center; margin-top: 40px;">
+      <h3>Total: $<span id="total-amount">0</span> MXN</h3>
+      <button onclick="window.location.href='checkout.html'" style="margin-top: 10px; padding: 12px 30px; background-color: #e84141; border: none; border-radius: 6px; color: white; cursor: pointer;">Finalizar Compra</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/thronekicksmx/" target="_blank">
+        <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram" />
+      </a>
+      <a href="https://wa.me/528123456789" target="_blank">
+        <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/cart.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+</html>

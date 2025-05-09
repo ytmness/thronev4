@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - Throne Kicks</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- Encabezado -->
+<header>
+    <div class="logo-container">
+        <img src="../images/file.png" alt="Logo Throne Kicks">
+    </div>
+    <nav>
+        <a href="index.html">Inicio</a>           
+        <a href="tenis.html">Tenis</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="accesorios.html">Accesorios</a>
+        <a href="retail.html">Retail</a>
+        <a href="carrito.html">Carrito</a>
+    </nav>
+            <!-- Buscador -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
+                <button id="search-button" onclick="buscarProducto()">Buscar</button>
+            </div>
+        </header>
+    
+    </header>
+
+    <!-- Sección de Resultados -->
+    <section class="search-results">
+        <h2>Resultados de Búsqueda</h2>
+        <div id="search-results" class="grid-container">
+            <!-- Los productos coincidentes se mostrarán aquí -->
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="no-results" style="display:none;">
+            <p>No se encontraron productos que coincidan con tu búsqueda.</p>
+        </div>
+    </section>
+   
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/thronekicksmx/" target="_blank" aria-label="Visita nuestro Instagram">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/528123456789" target="_blank" aria-label="Contáctanos en WhatsApp">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/resultados.js"></script> <!-- Archivo de JS que manejará los resultados -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throne Kicks - Checkout</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Estilos opcionales para ocultar la sección de facturación */
+    #facturacion-section.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo-container">
+      <img src="../images/file.png" alt="Logo Throne Kicks">
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="carrito.html">Carrito</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <!-- Sección Checkout -->
+  <section id="checkout-section">
+    <h2>Resumen de tu compra</h2>
+    <div id="checkout-resumen">
+      <!-- Aquí se mostrarán los productos del carrito y el total -->
+    </div>
+
+    <form id="checkout-form">
+      <h3>Datos de Envío</h3>
+      <label for="envio-nombre">Nombre:</label>
+      <input type="text" id="envio-nombre" name="envio-nombre" required>
+
+      <label for="envio-direccion">Dirección:</label>
+      <input type="text" id="envio-direccion" name="envio-direccion" required>
+
+      <label for="envio-ciudad">Ciudad:</label>
+      <input type="text" id="envio-ciudad" name="envio-ciudad" required>
+
+      <label for="envio-estado">Estado/Provincia:</label>
+      <input type="text" id="envio-estado" name="envio-estado" required>
+
+      <label for="envio-codigo">Código Postal:</label>
+      <input type="text" id="envio-codigo" name="envio-codigo" required>
+
+      <label for="envio-pais">País:</label>
+      <input type="text" id="envio-pais" name="envio-pais" required>
+
+      <h3>Datos de Facturación</h3>
+      <label>
+        <input type="checkbox" id="mismo-direccion" name="mismo-direccion">
+        La dirección de facturación es la misma que la de envío.
+      </label>
+
+      <!-- Sección de facturación que se ocultará si se marca el checkbox -->
+      <div id="facturacion-section">
+        <label for="facturacion-nombre">Nombre:</label>
+        <input type="text" id="facturacion-nombre" name="facturacion-nombre" required>
+
+        <label for="facturacion-direccion">Dirección:</label>
+        <input type="text" id="facturacion-direccion" name="facturacion-direccion" required>
+
+        <label for="facturacion-ciudad">Ciudad:</label>
+        <input type="text" id="facturacion-ciudad" name="facturacion-ciudad" required>
+
+        <label for="facturacion-estado">Estado/Provincia:</label>
+        <input type="text" id="facturacion-estado" name="facturacion-estado" required>
+
+        <label for="facturacion-codigo">Código Postal:</label>
+        <input type="text" id="facturacion-codigo" name="facturacion-codigo" required>
+
+        <label for="facturacion-pais">País:</label>
+        <input type="text" id="facturacion-pais" name="facturacion-pais" required>
+      </div>
+
+      <button type="submit">Confirmar Compra</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/checkout.js"></script>
+  <script src="../js/cart.js"></script> <!-- Si deseas reutilizar funciones relacionadas al carrito -->
+</body>
+</html>

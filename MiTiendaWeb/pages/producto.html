@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Throne Kicks - Detalles Producto</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <!-- Barra superior -->
+        <div class="top-bar">
+          <div class="logo-container">
+            <img src="../images/file.png" alt="Throne Kicks Logo">
+          </div>
+          <nav class="top-nav">
+            <a href="tenis.html">Tenis</a>
+            <a href="ropa.html">Ropa</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="retail.html">Retail</a>
+            <a href="carrito.html">Carrito</a>
+          </nav>
+          <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button id="search-button">Buscar</button>
+          </div>
+        </div>
+      
+        <!-- Barra inferior -->
+        <div class="bottom-bar">
+          <a href="#">Destacados</a>
+          <a href="#">Jordan</a>
+          <a href="#">Nike</a>
+          <a href="#">Adidas</a>
+          <a href="#">New Balance</a>
+          <a href="#">Apparel</a>
+          <a href="#">Marcas</a>
+        </div>
+      </header>
+
+  <!-- Detalles del Producto -->
+  <section id="producto-detalles" class="producto-detalles" style="display: flex; justify-content: center; align-items: center; gap: 40px; padding: 50px 5%;">
+    <div class="producto-imagen">
+      <img id="imagen-producto" src="" alt="Imagen del Producto" style="width: 450px; max-width: 100%;">
+    </div>
+    <div class="producto-info">
+      <h1 id="nombre-producto">Nombre del producto</h1>
+      <p id="precio-producto">$0.00</p>
+      <label for="talla-select">Selecciona una talla:</label>
+      <select id="talla-select"></select>
+      <p id="stock-info"></p>
+      <button id="agregar-carrito">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <section class="featured-products">
+    <h2 style="text-align:center;">Tenis</h2>
+  
+    <div class="carousel-container">
+      <button class="carousel-btn left" id="btn-left">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+  
+      <div class="carousel-track" id="productos-destacados">
+        <!-- Productos se cargan dinámicamente aquí -->
+      </div>
+  
+      <button class="carousel-btn right" id="btn-right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/thronekicksmx/" target="_blank">
+        <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/528123456789" target="_blank">
+        <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/product.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script>
+    function buscarProducto() {
+      const input = document.getElementById("search-input").value.trim();
+      if (input) {
+        window.location.href = `resultados.html?query=${encodeURIComponent(input)}`;
+      } else {
+        alert("Por favor ingresa un término de búsqueda.");
+      }
+    }
+    document.getElementById('search-input').addEventListener('keypress', e => {
+      if (e.key === 'Enter') buscarProducto();
+    });
+  </script>
+</body>
+</html>

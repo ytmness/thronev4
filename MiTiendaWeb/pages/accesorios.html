@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throne Kicks - Accesorios</title>
+    <link rel="stylesheet" href="../css/style.css"> <!-- Ruta corregida -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo-container">
+            <img src="../images/file.png" alt="Logo Throne Kicks">
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="tenis.html">Tenis</a>
+            <a href="ropa.html">Ropa</a>
+            <a href="accesorios.html">Accesorios</a>
+            <a href="retail.html">Retail</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+        <!-- Buscador -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <button id="search-button" onclick="buscarProducto()">Buscar</button>
+        </div>
+    </header>
+
+    <!-- Sección Accesorios -->
+    <section class="product-grid">
+        <h2>Accesorios</h2>
+        <div class="grid-container" id="productos-grid">
+            <!-- Los productos se llenarán aquí mediante JavaScript -->
+        </div>
+    </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/thronekicksmx/" target="_blank" aria-label="Visita nuestro Instagram">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/528123456789" target="_blank" aria-label="Contáctanos en WhatsApp">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
+                </a>
+            </div>
+        </footer>
+
+    <!-- Archivos de JavaScript -->
+    <script src="../js/cart.js"></script> <!-- Ruta corregida -->
+    <script type="module" src="../js/main.js"></script> <!-- Asegúrate de que sea tipo módulo -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Cargar productos desde el archivo JSON
+            fetch('../api/productos.json')
+                .then(response => response.json())
+                .then(productos => {
+                    const productosGrid = document.getElementById('productos-grid');
+
+                    // Filtrar productos solo de la categoría 'Accesorios'
+                    const productosAccesorios = productos.filter(producto => producto.categoria === 'Accesorios');
+
+                    productosAccesorios.forEach(producto => {
+                        // Verifica si la URL de la imagen es externa o interna
+                        const esURLExterna = producto.img.startsWith("http") || producto.img.startsWith("https");
+                        const rutaImagen = esURLExterna ? producto.img : `/images/${producto.img}`;
+
+                        // Crear un div para cada producto
+                        const productItem = document.createElement('div');
+                        productItem.classList.add('product-item');
+
+                        productItem.innerHTML = `
+                            <img src="${rutaImagen}" alt="${producto.nombre}" style="width: 150px; height: auto; border-radius: 8px;" />
+                            <h3>${producto.nombre}</h3>
+                            <p>$${producto.precio.toFixed(2)} MXN</p>
+                        `;
+
+                        // Agregar el evento de clic para redirigir al hacer clic en el producto
+                        productItem.addEventListener('click', function () {
+                            verDetalles(producto.id);
+                        });
+
+                        // Agregar el producto a la cuadrícula
+                        productosGrid.appendChild(productItem);
+                    });
+                })
+                .catch(error => console.error('Error al cargar los productos:', error));
+        });
+
+        // Función para redirigir a la página de detalles y almacenar los datos del producto en localStorage
+        function verDetalles(productoId) {
+            fetch('../api/productos.json')
+                .then(response => response.json())
+                .then(productos => {
+                    const productoSeleccionado = productos.find(prod => prod.id === productoId);
+                    if (productoSeleccionado) {
+                        // Almacenar el producto en localStorage
+                        localStorage.setItem('producto', JSON.stringify(productoSeleccionado));
+
+                        // Redirigir a la página de detalles
+                        window.location.href = 'producto.html';
+                    } else {
+                        alert("Producto no encontrado.");
+                    }
+                })
+                .catch(error => console.error('Error al cargar los productos:', error));
+        }
+    </script>
+</body>
+</html>

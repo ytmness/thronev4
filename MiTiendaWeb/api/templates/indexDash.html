@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Productos</title>
+    <link rel="stylesheet" href="/static/StyleDash.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <!-- Sección de Lista de Productos -->
+    <h2>Lista de Productos</h2>
+    <ul id="productos"></ul>
+
+    <!-- Sección de Agregar Producto -->
+    <h2>Agregar Producto</h2>
+    <form id="producto-form" enctype="multipart/form-data">
+        <input type="hidden" id="id">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <button type="button" id="buscar-imagenes">Buscar Imágenes</button>
+
+        <!-- Contenedor para mostrar las imágenes de resultados -->
+        <div id="imagenes-resultados" style="display:none;">
+            <h3>Selecciona una Imagen</h3>
+            <div id="imagenes-opciones"></div>
+        </div>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" placeholder="Precio" required>
+
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" placeholder="Categoría" required>
+
+        <div id="tallas-container">
+            <h3>Tallas y Stock</h3>
+        </div>
+        <button type="button" id="add-talla">Agregar Talla</button>
+        <input type="file" id="imagen">
+        <button type="submit">Guardar Producto</button>
+    </form>
+
+    <script src="/static/static.js"></script>
+    <script src="/static/googleSearch.js"></script>
+</body>
+</html>

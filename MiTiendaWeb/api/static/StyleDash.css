@@ -1,0 +1,143 @@
+/* General */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezados */
+h1, h2 {
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Lista de productos */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #910202;
+    transform: scale(1.05);
+}
+
+/* Imágenes */
+#imagenes-opciones img {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+#imagenes-opciones img:hover {
+    border-color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* Contenedor principal */
+#producto-form, #imagenes-opciones {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#producto-form h2 {
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input[type="text"], input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #aa0303da;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de tallas */
+#tallas-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#tallas-container div {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+#tallas-container input {
+    flex: 1;
+}
+
+/* Botón de agregar talla */
+#add-talla {
+    background-color: #28a745;
+}
+
+#add-talla:hover {
+    background-color: #218838;
+}
