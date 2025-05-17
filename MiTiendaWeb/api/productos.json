@@ -1,17 +1,20 @@
 [
     {
         "id": 1734222941977,
+        "marca": "Nike",
         "img": "https://images.stockx.com/images/Nike-Dunk-Low-Essential-Paisley-Pack-Pink-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1676728252",
         "nombre": "dunk pink paisley",
         "precio": 9000.0,
         "categoria": "Tenis",
         "tallas": {
-            "23": 54,
+            "23": 5,
             "24": 34
-        }
+        },
+        "imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Essential-Paisley-Pack-Pink-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1676728252"
     },
     {
         "id": 1734477968419,
+        "marca": "Bape",
         "img": "https://images.stockx.com/images/vertical/Bape-Color-Camo-Shark-Full-Zip-Hoodie-Purple_1.jpg?fit=fill&bg=FFFFFF&w=396&h=504&q=60&dpr=1",
         "nombre": "Bape Full Zip Purple",
         "precio": 13500.0,
@@ -22,6 +25,7 @@
     },
     {
         "id": 1734478330512,
+        "marca": "Off-White",
         "img": "https://s3.amazonaws.com/stockx-sneaker-analysis/wp-content/uploads/2020/06/OFF-WHITE-Slim-Fit-Dripping-Arrows-T-Shirt-White-Black-2.jpg",
         "nombre": "Off-White T-shirt",
         "precio": 9500.0,
@@ -32,6 +36,7 @@
     },
     {
         "id": 1734482106051,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Chicago-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1665691099",
         "nombre": "Jordan 1 Chicago Reimagined",
         "precio": 9500.0,
@@ -42,6 +47,7 @@
     },
     {
         "id": 1734482841785,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Black-Toe-Reimagined-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1731953350",
         "nombre": "Jordan 1 Retro High OG Black Toe Reimagined",
         "precio": 8760.0,
@@ -53,6 +59,7 @@
     },
     {
         "id": 1734482883019,
+        "marca": "Adidas",
         "img": "https://images.stockx.com/360/adidas-Forum-Low-Bad-Bunny-Pink/Images/adidas-Forum-Low-Bad-Bunny-Pink/Lv2/img01.jpg?w=480&q=60&dpr=1&updated_at=1635341309&h=320",
         "nombre": "Forum Pink Easter Bad Bunny",
         "precio": 15000.0,
@@ -65,6 +72,7 @@
     },
     {
         "id": 1734659540784,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-4-Retro-Black-Cat-2020-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606315877",
         "nombre": "Jordan 4 Black Cat",
         "precio": 9540.0,
@@ -76,6 +84,7 @@
     },
     {
         "id": 1734659623298,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-4-Retro-SB-Pine-Green-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1678346835",
         "nombre": "Jordan 4 Sb Pine Green",
         "precio": 15600.0,
@@ -87,16 +96,21 @@
     },
     {
         "id": 1734659705009,
+        "marca": "Nike",
         "img": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606325738",
         "nombre": "Dunk Sb Travis Scott",
         "precio": 30000.0,
         "categoria": "Tenis",
         "tallas": {
-            "26": 5
-        }
+            "26": 5,
+            "27": 7,
+            "28": 6
+        },
+        "imagen": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606325738"
     },
     {
         "id": 1734659769789,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Lucky-Green-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1681154454",
         "nombre": "Jordan 1 Retro High OG Lucky Green",
         "precio": 7000.0,
@@ -107,6 +121,7 @@
     },
     {
         "id": 1734659956487,
+        "marca": "Jordan",
         "img": "https://images.stockx.com/images/Air-Jordan-1-Retro-High-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1608736403",
         "nombre": "Jordan 1 High Travis Scott Mocha",
         "precio": 50000.0,
@@ -118,6 +133,7 @@
     },
     {
         "id": 1738686629227,
+        "marca": "Adidas",
         "img": "https://images.stockx.com/images/adidas-Forum-Low-Bad-Bunny-Triple-Black-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1738193358",
         "nombre": "Forum Bad Bunny back to school",
         "precio": 12500.0,
@@ -126,6 +142,334 @@
             "26": 5,
             "27": 6,
             "28": 7
+        }
+    },
+    {
+        "id": 1747276624180,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-Air-Force-1-Low-Supreme-Box-Logo-White-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "Air Force 1 Supreme White",
+        "precio": 5500.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 56,
+            "24": 43,
+            "25": 4
+        }
+    },
+    {
+        "id": 1747277257006,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-Dunk-Low-Blue-Paisley-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "dunk pink paisley blue",
+        "precio": 6700.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "23": 4,
+            "24": 1,
+            "25": 1
+        },
+        "imagen": "https://images.stockx.com/images/Nike-Dunk-Low-Blue-Paisley-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358"
+    },
+    {
+        "id": 1747278071978,
+        "marca": "Stussy",
+        "img": "https://images.stockx.com/images/Stussy-Basic-T-Shirt-White-ProductX.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1744142786",
+        "nombre": "Tee Stussy",
+        "precio": 4500.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 1
+        }
+    },
+    {
+        "id": 1747278091712,
+        "marca": "Stussy",
+        "img": "https://images.stockx.com/images/Stussy-Basic-T-Shirt-Black-Product.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1744142786",
+        "nombre": "Tee Stussy Black",
+        "precio": 4500.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "M": 3
+        }
+    },
+    {
+        "id": 1747278129690,
+        "marca": "Essentials",
+        "img": "https://timandgerrys.com/cdn/shop/files/Essentials-Black-Tee_1080x.jpg?v=1731556995",
+        "nombre": "Essentials Tee",
+        "precio": 3000.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 2
+        }
+    },
+    {
+        "id": 1747278163535,
+        "marca": "Fear of God",
+        "img": "https://images.stockx.com/images/FEAR-OF-GOD-ESSENTIALS-3D-Silicon-Applique-Boxy-T-Shirt-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1606317681",
+        "nombre": "Essentials Tee",
+        "precio": 1500.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "L": 4
+        }
+    },
+    {
+        "id": 1747278188675,
+        "marca": "Jordan",
+        "img": "https://images.stockx.com/images/Air-Jordan-6-Retro-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "Jordan 6 Travis Scott",
+        "precio": 30000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "31": 3
+        }
+    },
+    {
+        "id": 1747278214802,
+        "marca": "Bape",
+        "img": "https://images.stockx.com/images/BAPE-ABC-Camo-Shark-Full-Zip-Hoodie-SS23-Pink-v2.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1701463003",
+        "nombre": "Bape Full Zip Pink",
+        "precio": 8000.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 2
+        }
+    },
+    {
+        "id": 1747278234659,
+        "marca": "Bape",
+        "img": "https://images.stockx.com/images/BAPE-ABC-Camo-Shark-Full-Zip-Hoodie-SS23-Green-v2.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1701718016",
+        "nombre": "Bape Full Zip Green",
+        "precio": 6789.0,
+        "categoria": "Ropa",
+        "tallas": {
+            "S": 2
+        }
+    },
+    {
+        "id": 1747278998408,
+        "marca": "Supreme",
+        "img": "https://images.stockx.com/images/Supreme-New-Era-Box-Logo-Beanie-FW24-Light-Brown.jpg?fit=fill&bg=FFFFFF&w=480&h=320&q=60&dpr=1&trim=color&updated_at=1744142786",
+        "nombre": "Supreme Box Logo Beanie",
+        "precio": 1600.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "Unica": 2
+        }
+    },
+    {
+        "id": 1747279015464,
+        "marca": "Bape",
+        "img": "https://images.stockx.com/images/BAPE-Shark-Mask-Black-Multi.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1635260215",
+        "nombre": "BAPE Shark Mask",
+        "precio": 1500.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "Unica": 4
+        }
+    },
+    {
+        "id": 1747279030579,
+        "marca": "Off-White",
+        "img": "https://images.stockx.com/images/OFF-WHITE-Industrial-Belt-Yellow-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611790885",
+        "nombre": "Off-White Industrial Belt",
+        "precio": 4800.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "Unica": 4
+        },
+        "imagen": "https://images.stockx.com/images/OFF-WHITE-Industrial-Belt-Yellow-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1611790885"
+    },
+    {
+        "id": 1747279047750,
+        "marca": "Travis Scott",
+        "img": "https://images.stockx.com/images/Travis-Scott-Highest-In-The-Room-Cactus-Jack-Hat-Brown.png?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1621597012",
+        "nombre": "Travis Scott Cactus Jack Hat",
+        "precio": 2300.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "Unica": 23
+        }
+    },
+    {
+        "id": 1747279096701,
+        "marca": "Palace",
+        "img": "https://images.stockx.com/images/Palace-Cordura-Duck-Canvas-Shoulder-Bag-Carbon-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1728045925",
+        "nombre": "Palace Shoulder Bag",
+        "precio": 2400.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "Unica": 2
+        }
+    },
+    {
+        "id": 1747279118498,
+        "marca": "Fear of God",
+        "img": "https://images.stockx.com/images/FEAR-OF-GOD-Essentials-New-Era-Fitted-Cap-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1608475387",
+        "nombre": "Fear of God Essentials Cap",
+        "precio": 1400.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "UNICA": 2
+        }
+    },
+    {
+        "id": 1747279148642,
+        "marca": "KAWS",
+        "img": "https://image.goxip.com/84oFcuhFCHRGw4KLPkQjy8S0VxY=/fit-in/500x500/filters:format(jpg):quality(80):fill(white)/https:%2F%2Fimages.stockx.com%2Fimages%2FKAWS-Tokyo-First-First-Companion-Accomplice-JPP-Chum-Keychain-Set-of-15-2021.jpg",
+        "nombre": "KAWS Companion Keychain",
+        "precio": 1000.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "UNICA": 234
+        }
+    },
+    {
+        "id": 1747279169029,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-x-Stussy-Bucket-Hat-Black-Product-1.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "Nike x Stüssy Bucket Hat",
+        "precio": 1500.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "UNICA": 56
+        }
+    },
+    {
+        "id": 1747279185814,
+        "marca": "Chrome Hearts",
+        "img": "https://chromeworld.jp/wp-content/uploads/2023/01/Rectangle_638_12_1024x1024.webp",
+        "nombre": "Chrome Hearts Ring",
+        "precio": 8000.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "UNICA": 23
+        }
+    },
+    {
+        "id": 1747279273874,
+        "marca": "RIPNDIP",
+        "img": "https://images.stockx.com/images/RIPNDIP-x-Youtooz-Lord-Nermal-Top-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1637680048",
+        "nombre": "Lord Nermal Pocket Tee",
+        "precio": 500.0,
+        "categoria": "Retail",
+        "tallas": {
+            "S": 4,
+            "M": 6
+        }
+    },
+    {
+        "id": 1747279295014,
+        "marca": "RIPNDIP",
+        "img": "https://www.ripndipclothing.com/cdn/shop/files/IMG_5883_f559dc87-512b-4525-b764-4cc54bfd09b2.jpg?v=1737671040",
+        "nombre": "Frida Nermal Hoodie",
+        "precio": 1500.0,
+        "categoria": "Retail",
+        "tallas": {
+            "L": 4
+        }
+    },
+    {
+        "id": 1747279322862,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-SB-x-Parra-Japan-Federation-Kit-T-shirt-Black-White.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&q=60&dpr=1&trim=color&updated_at=1626804575",
+        "nombre": "Hang In There Tee",
+        "precio": 500.0,
+        "categoria": "Retail",
+        "tallas": {
+            "S": 5
+        }
+    },
+    {
+        "id": 1747279348163,
+        "marca": "RIPNDIP",
+        "img": "https://www.ripndipclothing.com/cdn/shop/files/IMG_2267.jpg?v=1745264008",
+        "nombre": "Shen Nerm Basketball Jersey",
+        "precio": 1700.0,
+        "categoria": "Retail",
+        "tallas": {
+            "XL": 5
+        }
+    },
+    {
+        "id": 1747279375388,
+        "marca": "Revenge",
+        "img": "https://images.stockx.com/images/Revenge-x-City-Morgue-Metal-Tour-Hoodie-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1718033628",
+        "nombre": "Metal Claw Hoodie",
+        "precio": 2400.0,
+        "categoria": "Retail",
+        "tallas": {
+            "XXL": 5
+        }
+    },
+    {
+        "id": 1747279428309,
+        "marca": "RIPNDIP",
+        "img": "https://www.ripndipclothing.com/cdn/shop/files/IMG_2244.jpg?v=1745263609",
+        "nombre": "Ripndip Insano Tee",
+        "precio": 1200.0,
+        "categoria": "Retail",
+        "tallas": {
+            "M": 3
+        }
+    },
+    {
+        "id": 1747279453931,
+        "marca": "Sprayground",
+        "img": "http://www.sprayground.com/cdn/shop/products/B3367_2.png?v=1686531227",
+        "nombre": "Shark Bite Backpack",
+        "precio": 2400.0,
+        "categoria": "Retail",
+        "tallas": {
+            "UNICA": 2
+        }
+    },
+    {
+        "id": 1747279471622,
+        "marca": "Sprayground",
+        "img": "https://images.stockx.com/images/Sprayground-Money-Bear-Melt-DLXSR-Backpack-Multicolor.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1722995712",
+        "nombre": "Money Bear Backpack",
+        "precio": 1600.0,
+        "categoria": "Retail",
+        "tallas": {
+            "UNICO": 4
+        }
+    },
+    {
+        "id": 1747279489890,
+        "marca": "Luke 1977",
+        "img": "https://www.luke1977.com/cdn/shop/files/D6840_4.jpg?v=1743421768",
+        "nombre": "Reverse Sharks in Paris Mini Duffle Bag",
+        "precio": 2500.0,
+        "categoria": "Accesorios",
+        "tallas": {
+            "UNICA": 23
+        }
+    },
+    {
+        "id": 1747348288464,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-SB-Dunk-Low-Jarritos-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "Dunk Sb Jarritos",
+        "precio": 5000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "25": 3,
+            "26": 3,
+            "27": 3
+        }
+    },
+    {
+        "id": 1747442352241,
+        "marca": "Nike",
+        "img": "https://images.stockx.com/images/Nike-Dunk-Low-White-Black-2021-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358",
+        "nombre": "dunk panda low",
+        "precio": 3000.0,
+        "categoria": "Tenis",
+        "tallas": {
+            "26": 2
         }
     }
 ]

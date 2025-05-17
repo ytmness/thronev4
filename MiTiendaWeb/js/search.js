@@ -6,12 +6,29 @@ function buscarProducto() {
 
     if (input) {
         // Mostrar pantalla de carga
-        document.getElementById('loading-screen').style.display = 'flex';
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.style.display = 'flex';
+            
+            // Animación de puntos suspensivos
+            let dots = 0;
+            const dotsElement = document.getElementById('dots');
+            const dotsInterval = setInterval(() => {
+                dots = (dots + 1) % 4;
+                if (dotsElement) {
+                    dotsElement.textContent = '.'.repeat(dots);
+                }
+            }, 500);
 
-        // Redirigir a la página de resultados con el término de búsqueda
-        setTimeout(() => {
+            // Redirigir a la página de resultados con el término de búsqueda
+            setTimeout(() => {
+                clearInterval(dotsInterval);
+                window.location.href = `resultados.html?query=${encodeURIComponent(input)}`;
+            }, 800); // Tiempo del retraso antes de la redirección
+        } else {
+            // Si no hay pantalla de carga, redirigir inmediatamente
             window.location.href = `resultados.html?query=${encodeURIComponent(input)}`;
-        }, 500); // Tiempo del retraso antes de la redirección para mostrar la pantalla de carga
+        }
     } else {
         alert('Por favor ingresa un término de búsqueda.');
     }

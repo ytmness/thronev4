@@ -57,11 +57,29 @@ function actualizarCarrito() {
   carrito.forEach((producto, index) => {
     const itemDiv = document.createElement("div");
     itemDiv.classList.add("cart-item");
+    
+    // Usar el campo correcto: producto.imagen
+    let rutaImagen;
+    if (producto.imagen && producto.imagen.startsWith("http")) {
+      rutaImagen = producto.imagen;
+    } else if (producto.imagen && producto.imagen.trim() !== "") {
+      rutaImagen = `/static/img/${producto.imagen}`;
+    } else {
+      rutaImagen = '../images/file.png'; // Usar el logo local como placeholder
+    }
+
     itemDiv.innerHTML = `
-      <p>
-        ${producto.nombre} (${producto.tallaSeleccionada || "Sin talla"}) - $${producto.precio.toFixed(2)} MXN
-      </p>
-      <button onclick="eliminarProducto(${index})">Eliminar</button>
+      <div class="cart-item-content">
+        <img src="${rutaImagen}" alt="${producto.nombre}" class="cart-item-image">
+        <div class="cart-item-details">
+          <h4>${producto.nombre}</h4>
+          <p>Talla: ${producto.tallaSeleccionada || "Sin talla"}</p>
+          <p class="cart-item-price">$${producto.precio.toFixed(2)} MXN</p>
+        </div>
+      </div>
+      <button class="delete-button" onclick="eliminarProducto(${index})">
+        <i class="fas fa-trash"></i> Eliminar
+      </button>
     `;
     cartItems.appendChild(itemDiv);
     total += producto.precio;

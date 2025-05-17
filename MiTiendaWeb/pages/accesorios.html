@@ -4,109 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Throne Kicks - Accesorios</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Ruta corregida -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/paginacion.css">
+    <link rel="stylesheet" href="../css/accesorios.css">
 </head>
-<body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo-container">
-            <img src="../images/file.png" alt="Logo Throne Kicks">
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../images/loading.gif" alt="Cargando..." id="loading-gif">
+            <p id="loading-text">Cargando<span id="dots">...</span></p>
         </div>
-        <nav>
+    </div>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="../images/file.png" alt="Throne Kicks Logo">
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+        <div class="bottom-bar">
             <a href="index.html">Inicio</a>
             <a href="tenis.html">Tenis</a>
             <a href="ropa.html">Ropa</a>
-            <a href="accesorios.html">Accesorios</a>
             <a href="retail.html">Retail</a>
             <a href="carrito.html">Carrito</a>
-        </nav>
-        <!-- Buscador -->
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
-            <button id="search-button" onclick="buscarProducto()">Buscar</button>
         </div>
     </header>
 
-    <!-- Sección Accesorios -->
-    <section class="product-grid">
-        <h2>Accesorios</h2>
-        <div class="grid-container" id="productos-grid">
-            <!-- Los productos se llenarán aquí mediante JavaScript -->
-        </div>
-    </section>
+    <main style="flex: 1 0 auto;">
+        <!-- Botón de filtro móvil -->
+        <button class="mobile-facets__open button button--small button--full-width" id="toggle-filtros" aria-label="Abrir filtros" style="margin: 32px auto 24px auto;">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-filter" fill="none" viewBox="0 0 24 24">
+                <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" fill="currentColor"></path>
+            </svg>
+            <span>Filtrar Productos</span>
+        </button>
 
-        <!-- Pie de página -->
-        <footer>
-            <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/thronekicksmx/" target="_blank" aria-label="Visita nuestro Instagram">
-                    <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
-                </a>
-                <a href="https://wa.me/528123456789" target="_blank" aria-label="Contáctanos en WhatsApp">
-                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
-                </a>
+        <!-- Panel de filtros móvil -->
+        <div class="mobile-facets" id="mobile-facets">
+            <div class="mobile-facets__header">
+                <div class="mobile-facets__header-inner">
+                    <div class="mobile-facets__heading h2 medium-hide large-up-hide">Filtrar y ordenar</div>
+                    <div class="mobile-facets__heading h2 small-hide">Filtro</div>
+                    <button class="mobile-facets__close" id="close-filters">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 24 24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <div class="product-count" role="status">
+                        <p id="ProductCountMobile" class="product-count__text">0 productos</p>
+                    </div>
+                </div>
             </div>
-        </footer>
 
-    <!-- Archivos de JavaScript -->
-    <script src="../js/cart.js"></script> <!-- Ruta corregida -->
-    <script type="module" src="../js/main.js"></script> <!-- Asegúrate de que sea tipo módulo -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Cargar productos desde el archivo JSON
-            fetch('../api/productos.json')
-                .then(response => response.json())
-                .then(productos => {
-                    const productosGrid = document.getElementById('productos-grid');
+            <div class="mobile-facets__main">
+                <div class="mobile-facets__inner">
+                    <!-- Sección de Marcas -->
+                    <div class="facet-group" data-tipo="marca">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Marca
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
 
-                    // Filtrar productos solo de la categoría 'Accesorios'
-                    const productosAccesorios = productos.filter(producto => producto.categoria === 'Accesorios');
+                    <!-- Sección de Precios -->
+                    <div class="facet-group" data-tipo="precio">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Precio
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
 
-                    productosAccesorios.forEach(producto => {
-                        // Verifica si la URL de la imagen es externa o interna
-                        const esURLExterna = producto.img.startsWith("http") || producto.img.startsWith("https");
-                        const rutaImagen = esURLExterna ? producto.img : `/images/${producto.img}`;
+                    <!-- Sección de Tallas -->
+                    <div class="facet-group" data-tipo="talla">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Talla
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values talla-grid">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        // Crear un div para cada producto
-                        const productItem = document.createElement('div');
-                        productItem.classList.add('product-item');
+            <div class="mobile-facets__footer">
+                <button class="button button--primary" id="aplicar-filtros">Aplicar filtros</button>
+                <button class="button button--secondary" id="limpiar-filtros">Limpiar filtros</button>
+            </div>
+        </div>
 
-                        productItem.innerHTML = `
-                            <img src="${rutaImagen}" alt="${producto.nombre}" style="width: 150px; height: auto; border-radius: 8px;" />
-                            <h3>${producto.nombre}</h3>
-                            <p>$${producto.precio.toFixed(2)} MXN</p>
-                        `;
+        <div id="overlay" class="mobile-facets__overlay"></div>
 
-                        // Agregar el evento de clic para redirigir al hacer clic en el producto
-                        productItem.addEventListener('click', function () {
-                            verDetalles(producto.id);
-                        });
+        <div id="productos-grid" class="grid-container"></div>
+        <div class="pagination" id="paginacion"></div>
+    </main>
 
-                        // Agregar el producto a la cuadrícula
-                        productosGrid.appendChild(productItem);
-                    });
-                })
-                .catch(error => console.error('Error al cargar los productos:', error));
-        });
+    <footer>
+        <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/thronekicksmx/" target="_blank">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/528123456789" target="_blank">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
 
-        // Función para redirigir a la página de detalles y almacenar los datos del producto en localStorage
-        function verDetalles(productoId) {
-            fetch('../api/productos.json')
-                .then(response => response.json())
-                .then(productos => {
-                    const productoSeleccionado = productos.find(prod => prod.id === productoId);
-                    if (productoSeleccionado) {
-                        // Almacenar el producto en localStorage
-                        localStorage.setItem('producto', JSON.stringify(productoSeleccionado));
-
-                        // Redirigir a la página de detalles
-                        window.location.href = 'producto.html';
-                    } else {
-                        alert("Producto no encontrado.");
-                    }
-                })
-                .catch(error => console.error('Error al cargar los productos:', error));
-        }
-    </script>
+    <script src="../js/search.js"></script>
+    <script src="../js/accesorios.js"></script>
 </body>
-</html>
+</html> 

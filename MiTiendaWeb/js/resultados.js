@@ -1,37 +1,51 @@
 console.log("Resultados.js cargado correctamente");
 
+async function buscarProductos(termino) {
+    try {
+        const response = await fetch('http://127.0.0.1:3000/api/productos');
+        if (!response.ok) throw new Error('Error al cargar productos');
+        const productos = await response.json();
+        
+        return productos
+            .map(producto => ({
+                id: producto._id || producto.id_original || producto.id,
+                nombre: producto.nombre,
+                marca: producto.marca,
+                precio: producto.precio,
+                categoria: producto.categoria,
+                img: producto.img || producto.imagen,
+                tallas: producto.tallas
+            }))
+            .filter(producto => 
+                producto.nombre.toLowerCase().includes(termino.toLowerCase()) ||
+                producto.marca.toLowerCase().includes(termino.toLowerCase()) ||
+                producto.categoria.toLowerCase().includes(termino.toLowerCase())
+            );
+    } catch (error) {
+        console.error('Error:', error);
+        return [];
+    }
+}
+
+// Inicialización
 document.addEventListener('DOMContentLoaded', async () => {
-    // Obtener el término de búsqueda de la URL
     const urlParams = new URLSearchParams(window.location.search);
-    const searchTerm = urlParams.get('query'); // Obtener el término de búsqueda de la URL
-
-    console.log("Término de búsqueda:", searchTerm);  // Verificar que el término esté presente en la URL
-
-    if (!searchTerm) {
-        console.error("No se proporcionó un término de búsqueda.");
-        return;  // Si no hay término de búsqueda, salir
+    const termino = urlParams.get('q');
+    
+    if (termino) {
+        const productos = await buscarProductos(termino);
+        mostrarResultados(productos, termino);
+    } else {
+        mostrarError('No se especificó un término de búsqueda');
     }
+});
 
-    // Si los productos no están disponibles globalmente, cargarlos desde el archivo JSON
-    let productos = window.productos || [];
-    if (productos.length === 0) {
-        try {
-            const response = await fetch("../api/productos.json");
-            if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status}`);
-            productos = await response.json();
-            window.productos = productos; // Guardamos los productos globalmente
-            console.log("Productos cargados desde JSON:", productos);
-        } catch (error) {
-            console.error("Error al cargar productos:", error.message);
-            return;  // Si hay error, salir
-        }
-    }
-
+function mostrarResultados(productos, termino) {
     console.log("Productos disponibles:", productos);  // Verifica que los productos estén disponibles
 
     // Filtrar los productos que coinciden con el término de búsqueda
     const productosFiltrados = productos.filter(producto => 
-        producto.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+        producto.nombre.toLowerCase().includes(termino.toLowerCase())
     );
 
     console.log("Productos filtrados:", productosFiltrados); // Verifica si el filtro está funcionando correctamente
@@ -53,4 +67,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         resultsContainer.innerHTML = '<p>No se encontraron productos que coincidan con tu búsqueda.</p>';
     }
-});
+}
+
+function mostrarError(mensaje) {
+    console.error(mensaje);
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = `<p class="error">${mensaje}</p>`;
+}

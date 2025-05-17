@@ -25,3 +25,46 @@ function verDetalles(productoId) {
             document.getElementById('loading-screen').style.display = 'none';
         });
 }
+
+async function cargarDetallesProducto(id) {
+    try {
+        const response = await fetch('http://127.0.0.1:3000/api/productos');
+        if (!response.ok) throw new Error('Error al cargar productos');
+        const productos = await response.json();
+        const producto = productos.find(p => (p._id || p.id_original || p.id) === id);
+        
+        if (!producto) {
+            throw new Error('Producto no encontrado');
+        }
+
+        return {
+            id: producto._id || producto.id_original || producto.id,
+            nombre: producto.nombre,
+            marca: producto.marca,
+            precio: producto.precio,
+            categoria: producto.categoria,
+            img: producto.img || producto.imagen,
+            tallas: producto.tallas
+        };
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
+    }
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idProducto = urlParams.get('id');
+    
+    if (idProducto) {
+        const producto = await cargarDetallesProducto(idProducto);
+        if (producto) {
+            mostrarDetallesProducto(producto);
+        } else {
+            mostrarError('Producto no encontrado');
+        }
+    } else {
+        mostrarError('ID de producto no especificado');
+    }
+});
