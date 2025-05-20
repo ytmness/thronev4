@@ -1,0 +1,264 @@
+.confirmation-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.confirmation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.success-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+
+.success-message h1 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.success-message p {
+    color: #1b5e20;
+    font-size: 1.1rem;
+}
+
+.order-details {
+    margin-top: 2rem;
+}
+
+.order-details h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.info-group {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.info-group h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.info-group p {
+    margin: 0.75rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-group strong {
+    color: #333;
+    font-weight: 600;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.customer-info,
+.delivery-info,
+.payment-info,
+.order-items {
+    margin-bottom: 2rem;
+}
+
+.customer-info h3,
+.delivery-info h3,
+.payment-info h3,
+.order-items h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#payment-method {
+    font-weight: 600;
+    color: #333;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.order-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.order-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h4 {
+    margin: 0 0 0.75rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.item-details p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.item-details strong {
+    color: #333;
+    font-weight: 600;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    transform: translateY(-1px);
+}
+
+@media print {
+    .main-header,
+    .action-buttons {
+        display: none !important;
+    }
+
+    .confirmation-container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .success-message {
+        background-color: white !important;
+        border: 1px solid #dee2e6;
+    }
+
+    .success-message i {
+        color: #4caf50 !important;
+    }
+
+    .success-message h1,
+    .success-message p {
+        color: #333 !important;
+    }
+
+    .info-group,
+    .order-item {
+        background-color: white !important;
+        border: 1px solid #dee2e6;
+        break-inside: avoid;
+    }
+
+    .order-item img {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+}
+
+@media (max-width: 768px) {
+    .confirmation-section {
+        padding: 1rem;
+    }
+
+    .confirmation-container {
+        padding: 1rem;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .order-item img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .item-details strong {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+} 

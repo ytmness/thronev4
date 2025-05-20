@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throne Kicks - Accesorios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/paginacion.css">
+    <link rel="stylesheet" href="../css/accesorios.css">
+    <!-- CSS móvil condicional -->
+    <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 768px)" />
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../images/loading.gif" alt="Cargando..." id="loading-gif">
+            <p id="loading-text">Cargando<span id="dots">...</span></p>
+        </div>
+    </div>
+
+    <!-- HEADER MÓVIL Y MENÚ LATERAL SOLO PARA MÓVIL -->
+    <header class="main-header mobile-header">
+        <button class="icon-btn menu-btn" id="openMenu" aria-label="Abrir menú">
+            <svg width="28" height="28" viewBox="0 0 24 24"><rect y="4" width="24" height="2"/><rect y="11" width="24" height="2"/><rect y="18" width="24" height="2"/></svg>
+        </button>
+        <div class="logo-container">
+            <img src="../images/file.png" alt="Logo">
+        </div>
+        <div class="header-icons">
+            <button class="icon-btn search-btn" id="openSearch" aria-label="Buscar">
+                <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke="#fff" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#fff" stroke-width="2"/></svg>
+            </button>
+            <a href="carrito.html" class="icon-btn cart-btn" aria-label="Carrito">
+                <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1,1H5L7.68,14.39A2,2,0,0,0,9.62,16H19a2,2,0,0,0,2-1.72l1-7A2,2,0,0,0,20,5H6"/></svg>
+            </a>
+        </div>
+    </header>
+    <!-- Overlay de búsqueda -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" id="search-input-mobile" placeholder="Buscar productos...">
+            <button class="close-search" id="closeSearch" aria-label="Cerrar búsqueda">&times;</button>
+            <button id="search-button-mobile" style="margin-left:10px;">Buscar</button>
+        </div>
+    </div>
+    <!-- Menú lateral -->
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">&times;</button>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tenis.html">Tenis</a></li>
+            <li><a href="ropa.html">Ropa</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+    </nav>
+    <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+    <!-- HEADER DE ESCRITORIO (top-bar y bottom-bar) SOLO PARA DESKTOP -->
+    <header class="main-header desktop-header">
+      <div class="top-bar">
+        <div class="logo-container">
+          <img src="../images/file.png" alt="Throne Kicks Logo" />
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Buscar productos..." />
+          <button id="search-button">Buscar</button>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <a href="index.html">Inicio</a>
+        <a href="tenis.html">Tenis</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="accesorios.html">Accesorios</a>
+        <a href="retail.html">Retail</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+    </header>
+
+    <main style="flex: 1 0 auto;">
+        <!-- Botón de filtro móvil -->
+        <button class="mobile-facets__open button button--small button--full-width" id="toggle-filtros" aria-label="Abrir filtros" style="margin: 32px auto 24px auto;">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-filter" fill="none" viewBox="0 0 24 24">
+                <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" fill="currentColor"></path>
+            </svg>
+            <span>Filtrar Productos</span>
+        </button>
+
+        <!-- Panel de filtros móvil -->
+        <div class="mobile-facets" id="mobile-facets">
+            <div class="mobile-facets__header">
+                <div class="mobile-facets__header-inner">
+                    <div class="mobile-facets__heading h2 medium-hide large-up-hide">Filtrar y ordenar</div>
+                    <div class="mobile-facets__heading h2 small-hide">Filtro</div>
+                    <button class="mobile-facets__close" id="close-filters">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-close" fill="none" viewBox="0 0 24 24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <div class="product-count" role="status">
+                        <p id="ProductCountMobile" class="product-count__text">0 productos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-facets__main">
+                <div class="mobile-facets__inner">
+                    <!-- Sección de Marcas -->
+                    <div class="facet-group" data-tipo="marca">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Marca
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Precios -->
+                    <div class="facet-group" data-tipo="precio">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Precio
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Tallas -->
+                    <div class="facet-group" data-tipo="talla">
+                        <button class="facet-group__title" aria-expanded="true" type="button">
+                            Talla
+                            <svg class="icon icon-caret" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="facet-group__content active">
+                            <div class="facet-values talla-grid">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-facets__footer">
+                <button class="button button--primary" id="aplicar-filtros">Aplicar filtros</button>
+                <button class="button button--secondary" id="limpiar-filtros">Limpiar filtros</button>
+            </div>
+        </div>
+
+        <div id="overlay" class="mobile-facets__overlay"></div>
+
+        <div id="productos-grid" class="grid-container"></div>
+        <div class="pagination" id="paginacion"></div>
+    </main>
+
+    <footer>
+        <p>© 2024 Throne Kicks. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/thronekicksmx/" target="_blank">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-rouge.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/528123456789" target="_blank">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-rouge.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/search.js"></script>
+    <script src="../js/accesorios.js"></script>
+    <script src="../js/menu-mobile.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openSearchBtn = document.getElementById('openSearch');
+            const searchOverlay = document.getElementById('searchOverlay');
+            const closeSearchBtn = document.getElementById('closeSearch');
+            const searchInputMobile = document.getElementById('search-input-mobile');
+            const searchButtonMobile = document.getElementById('search-button-mobile');
+            if (openSearchBtn && searchOverlay) {
+                openSearchBtn.addEventListener('click', function() {
+                    searchOverlay.classList.add('active');
+                    searchInputMobile.focus();
+                });
+            }
+            if (closeSearchBtn && searchOverlay) {
+                closeSearchBtn.addEventListener('click', function() {
+                    searchOverlay.classList.remove('active');
+                });
+            }
+            if (searchButtonMobile && searchInputMobile) {
+                searchButtonMobile.addEventListener('click', function() {
+                    const query = searchInputMobile.value.trim().toLowerCase();
+                    if (query) {
+                        window.location.href = 'resultados.html?busqueda=' + encodeURIComponent(query);
+                    }
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+                    searchOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
